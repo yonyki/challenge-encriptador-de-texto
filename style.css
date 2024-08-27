@@ -1,0 +1,248 @@
+/*Colores y Fuentes de la página*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;family=Krona+One&amp;family=Montserrat:ital,wght@0,100..900;1,100..900&amp;display=swap');
+
+:root{
+    --color1: #F3F5FC;
+    --color2: #800000;
+    --color3: #FFFFFF;
+    --color4: #000000;
+    --color5: #D8DFE8;
+    --color6: #DAD4B5;
+    --color7: #343A40;
+    --color8: #9B9797;
+    --color9: #E8E8E8;
+
+    --fuente: "Inter", sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+header{
+    margin-bottom: 5rem;
+    width: 70%;
+}
+
+body{
+    background: var(--color1);
+    font-family: var(--fuente);
+}
+
+main{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo{
+    margin: auto;
+}
+
+
+.resultado_img{
+    padding-bottom: 0px;
+    margin: 0px;
+}
+
+.form_seccion{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 70dvh;
+    margin: auto;
+}
+
+.form_msj{
+    width: 100%;
+    max-width: 577px;
+    height: 65dvh;
+    border-color: transparent;
+    background: transparent;
+    outline: none;
+    color: var(--color2);
+    font-family: var(--fuente);
+    font-size: 3.2rem;
+    margin-bottom: 3rem;
+    overflow: auto;
+}
+
+::placeholder{
+    color: var(--color2);
+}
+
+.alert_msj{
+    display: flex;
+    align-items: center;
+    gap: .7rem;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: var(--color6);
+}
+
+.submit_container{
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.form_btn{
+    background: var(--color2);
+    color: var(--color3);
+    font-size: 1.6rem;
+    padding: 1rem 2rem;
+    width: 328px;
+    height: 67px;
+    border-radius: 24px;
+    border: 1px solid var(--color2);
+    font-weight: 600;
+}
+
+.form_btn--secundary{
+    background: transparent;
+    color: var(--color2);
+}
+
+.form_btn--secundary--copy{
+    background: transparent;
+    color: var(--color2);
+    margin-top: 3rem;
+}
+
+.resultado{
+    background: var(--color3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    height: 90dvh;
+    width: 100%;
+    max-width: 40rem;
+    border-radius: 32px;
+    margin: auto;
+}
+
+.resultado_container{
+    text-align: center;
+    padding: 0px 32px;
+}
+
+.resultado_titulo{
+    color: var(--color7);
+    font-size: 24px;
+}
+
+.resultado_texto{
+    color: var(--color6);
+    font-size: 16px;
+}
+
+.resultado_img{
+    display: block;
+}
+
+.hidden{
+    display: none;
+}
+
+footer{
+    padding-top: 5rem;
+    height: 5vh;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    font-family: var(--fuente);
+}
+
+footer p{
+    list-style: none;
+    margin: 0px 0px 0px 0px;
+    text-align: center;
+  }
+
+footer ul{
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 0px;
+    padding: 0px;
+}
+
+footer li{
+    list-style: none;
+    margin: 5px 10px 5px 10px;
+  }
+
+footer a{
+    text-decoration: none;
+    color: #0A3871;
+    font-size: 20px;
+}
+
+footer a:hover{
+    color: #343434;
+}
+
+@media screen and (max-width:768px){
+    main{
+        flex-direction: column;
+    }
+
+    .submit_container{
+        justify-content: center; 
+    }
+
+    .resultado{
+        max-width: 624px;
+        min-width: 325px;
+        height: 260px;
+        min-height: 186px;
+        margin-top: 2rem;
+    }
+
+    .resultado_img{
+        display: none;
+    }
+
+    header img{
+        width: 73px;
+    }
+
+    .form_btn--secundary--copy{
+        max-width: 270px;
+        max-height: 60px;
+        margin-top: 1.5rem;
+    }
+    
+    footer{
+        justify-content: center; 
+        min-width: 325px;
+    }
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+    width: 20px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: #000;
+    box-shadow: 0 0 0 0 #0004;
+    animation: l2 1.5s infinite linear;
+    position: relative;
+  }
+  .loader:before,
+  .loader:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    box-shadow: 0 0 0 0 #0004;
+    animation: inherit;
+    animation-delay: -0.5s;
+  }
+  .loader:after {
+    animation-delay: -1s;
+  }
+  @keyframes l2 {
+      100% {box-shadow: 0 0 0 40px #0000}
+  }
